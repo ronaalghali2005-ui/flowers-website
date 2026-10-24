@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر وَرْد | الزهور الفاخرة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --luxury-bg: #FAF3F2;     
+            --header-pink: #f8e2e5;       
+            --gold-premium: #C5A059;       
+            --charcoal-dark: #3A2E2E;      
+            --muted-gray: #7A6E6E;         
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--luxury-bg);
+            color: var(--charcoal-dark);
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .luxury-header {
+            background-color: var(--header-pink);
+            border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+            height: 75px; 
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 0 50px;
+        }
+
+        .header-wrap {
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal-dark);
+            font-size: 14px;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold-premium);
+        }
+
+        .premium-logo {
+            height: 140px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .shop-now-btn {
+            border: 1px solid var(--charcoal-dark);
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--charcoal-dark);
+            background: transparent;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .shop-now-btn:hover {
+            background-color: var(--charcoal-dark);
+            color: var(--white);
+        }
+
+        .hero-premium {
+            width: 100%;
+            height: 25vh; 
+            background-image: linear-gradient(to bottom, rgba(254, 243, 242, 0.1), rgba(254, 243, 242, 0.4)), 
+                              url("images/back1.jfif");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-overlay-text {
+            background-color: rgba(255, 255, 255, 0.85); 
+            padding: 15px 40px;
+            border-radius: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        }
+
+        .hero-title {
+            font-size: 24px; 
+            font-weight: 300;
+            color: var(--charcoal-dark);
+        }
+
+        .hero-title span {
+            color: var(--gold-premium); 
+            font-weight: 600;
+        }
+
+        .luxury-workspace {
+            max-width: 1100px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 10px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 1;
+        }
+
+        .experience-grid {
+            display: flex;
+            flex-direction: row; 
+            justify-content: center;
+            gap: 40px; 
+            width: 100%;
+        }
+
+        .experience-card {
+            position: relative;
+            background-color: var(--white);
+            border-radius: 12px; 
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(58, 46, 46, 0.03);
+            flex: 1;
+            max-width: 480px;
+            height: 260px; 
+        }
+
+        .card-img-cover {
+            width: 100%;
+            height: 100%;
+        }
+
+        .card-img-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .card-content-luxury {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(58, 46, 46, 0.2) 10%, rgba(58, 46, 46, 0.85) 80%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 25px;
+            opacity: 0; 
+            transform: translateY(100%); 
+            transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .collection-tag {
+            font-size: 11px;
+            color: var(--gold-premium);
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .card-content-luxury h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--white);
+        }
+
+        .card-content-luxury p {
+            font-size: 12px;
+            color: #E8E2E1;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .action-luxury-link {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--gold-premium);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .experience-card:hover .card-content-luxury {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .experience-card:hover .card-img-cover img {
+            transform: scale(1.05); 
+        }
+
+        .luxury-footer {
+            text-align: center;
+            padding: 18px 20px; 
+            background-color: #F7ECEB;
+            color: var(--charcoal-dark); 
+            font-size: 12px;
+            font-weight: 400;
+            border: 1px solid rgba(197, 160, 89, 0.3); 
+            width: calc(100% - 80px); 
+            margin: 0 auto 20px auto; 
+            border-radius: 4px;
+        }
+
+        @media (max-width: 768px) {
+            html, body {
+                overflow-y: auto;
+                height: auto;
+            }
+            .luxury-header {
+                height: 70px;
+                padding: 0 20px;
+            }
+            .nav-links, .header-status {
+                display: none; 
+            }
+            .experience-grid {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            .experience-card {
+                max-width: 100%;
+                width: 100%;
+                height: 200px;
+            }
+            .luxury-footer {
+                width: 100%;
+                margin: 20px 0 0 0;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="luxury-header">
+        <div class="header-wrap">
+            <div class="header-action">
+                <button class="shop-now-btn">تسوق الآن</button>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#contact">تواصل معنا</a></li>
+                <li><a href="#blog">المدونة</a></li>
+                <li><a href="#custom">تخصيص</a></li>
+                <li><a href="#bouquets">الباقات</a></li>
+                <li><a href="#about">نبذة عنا</a></li>
+            </ul>
+
+            <div class="main-brand-logo">
+                <img src="images/logo.png" alt="Warda" class="premium-logo">
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-premium">
+        <div class="hero-overlay-text">
+            <h2 class="hero-title">الجمال <span>الكلاسيكي</span> في أبهى صوره</h2>
+            <div class="luxury-divider"></div>
+        </div>
+    </section>
+
+    <main class="luxury-workspace">
+        <div class="experience-grid">
+            
+            <div class="experience-card" id="browse-ready-bouquets">
+                <div class="card-img-cover">
+                    <img src="images/gall.jfif" alt="المجموعة الجاهزة">
+                </div>
+                <div class="card-content-luxury">
+                    <span class="collection-tag">إبداعات جاهزة</span>
+                    <h4>المجموعة الحصرية</h4>
+                    <p>تصفحي تشكيلة مسبقة الصنع نسقت بأيدي خبراء التنسيق لدينا لتناسب أرقى المناسبات.</p>
+                    <span class="action-luxury-link">استكشفي المجموعة <i class="fa-solid fa-chevron-left"></i></span>
+                </div>
+            </div>
+
+            <div class="experience-card" id="design-custom-bouquet">
+                <div class="card-img-cover">
+                    <img src="images/cust.jfif" alt="صمم باقتك">
+                </div>
+                <div class="card-content-luxury">
+                    <span class="collection-tag">تخصيص كامل</span>
+                    <h4>تنسيق باقة فريدة</h4>
+                    <p>كوني مهندسة باقتكِ الخاصة؛ اختاري أنواع الورد، الألوان، وورق التغليف الفخم خطوة بخطوة.</p>
+                    <span class="action-luxury-link">ابدئي التصميم الآن <i class="fa-solid fa-chevron-left"></i></span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="luxury-footer">
+        <p>© 2026   . جميع الحقوق محفوظة لمتجر وَرْد . تصميم وتنفيذ [ أنيار الغالي  ] </p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const readyCard = document.getElementById('browse-ready-bouquets');
+            const customCard = document.getElementById('design-custom-bouquet');
+
+            if (readyCard) {
+                readyCard.addEventListener('click', () => { window.location.href = 'ready-bouquets.html'; });
+            }
+            if (customCard) {
+                customCard.addEventListener('click', () => { window.location.href = 'custom-bouquet.html'; });
+            }
+        });
+    </script>
+</body>
+</html>
