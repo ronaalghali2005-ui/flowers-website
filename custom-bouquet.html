@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اصنع باقتك الفريدة | متجر وَرْد</title>
+    <link rel="stylesheet" href="custom-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="app-header">
+        <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-right"></i> الرئيسية</a>
+        
+        <div class="tabs-navigation">
+            <button class="tab-nav-btn active" data-target="flowers-step">1. اختيار الورد</button>
+            <button class="tab-nav-btn" data-target="wrapping-step">2. نوع التغليف</button>
+        </div>
+
+        <div class="mini-logo">
+            <img src="images/logo.PNG" alt="" class="logo-img">
+        </div>
+    </header>
+
+    <main class="main-workspace">
+        
+        <section id="flowers-step" class="workspace-tab-content active">
+            <h2 class="section-title"><i class="fa-solid fa-flower"></i> 1. اختر أنواع الورد وكمياتها</h2>
+            
+            <div class="flowers-grid">
+                
+                <div class="flower-card" data-name="ورد الروز">
+                    <div class="carousel-container">
+                        <div class="carousel-slides">
+                            <img src="images/red rose.jfif" class="carousel-img active" data-color="أحمر">
+                            <img src="images/yellow rose.jfif" class="carousel-img" data-color="أصفر">
+                            <img src="images/pink rose.jfif" class="carousel-img" data-color="وردي">
+                            <img src="images/white rose.jfif" class="carousel-img" data-color="أبيض">
+                        </div>
+                        <button class="carousel-arrow prev-arrow">&#10094;</button>
+                        <button class="carousel-arrow next-arrow">&#10095;</button>
+                        <div class="current-color-badge">اللون: <span class="color-text">أحمر</span></div>
+                    </div>
+                    <h3>ورد الروز (الجوري)</h3>
+                    <div class="flower-price">السعر: 15 د.ل / وردة</div>
+                    <div class="counter-control">
+                        <button class="counter-btn minus-btn">-</button>
+                        <span class="count-number">0</span>
+                        <button class="counter-btn plus-btn">+</button>
+                    </div>
+                </div>
+
+                <div class="flower-card" data-name="ورد الليليوم">
+                    <div class="carousel-container">
+                        <div class="carousel-slides">
+                            <img src="images/whit lily.jfif" class="carousel-img active" data-color="أبيض">
+                            <img src="images/orange lily.jfif" class="carousel-img" data-color="برتقالي">
+                            <img src="images/pink lily.jfif" class="carousel-img" data-color="وردي">
+                            <img src="images/yellow lily.jfif" class="carousel-img" data-color="أصفر">
+                            <img src="images/red lily.jfif" class="carousel-img" data-color="أحمر">
+                        </div>
+                        <button class="carousel-arrow prev-arrow">&#10094;</button>
+                        <button class="carousel-arrow next-arrow">&#10095;</button>
+                        <div class="current-color-badge">اللون: <span class="color-text">أبيض</span></div>
+                    </div>
+                    <h3>ورد الليليوم (Lily)</h3>
+                    <div class="flower-price">السعر: 15 د.ل / وردة</div>
+                    <div class="counter-control">
+                        <button class="counter-btn minus-btn">-</button>
+                        <span class="count-number">0</span>
+                        <button class="counter-btn plus-btn">+</button>
+                    </div>
+                </div>
+
+                <div class="flower-card" data-name="ورد التوليب">
+                    <div class="carousel-container">
+                        <div class="carousel-slides">
+                            <img src="images/pink tulip.jfif" class="carousel-img" data-color="وردي">
+                            <img src="images/red tulip.jfif" class="carousel-img" data-color="أحمر">
+                            <img src="images/yellow tulip.jfif" class="carousel-img" data-color="أصفر">
+                            <img src="images/white tulip.jfif" class="carousel-img" data-color="أبيض">
+                        </div>
+                        <button class="carousel-arrow prev-arrow">&#10094;</button>
+                        <button class="carousel-arrow next-arrow">&#10095;</button>
+                        <div class="current-color-badge">اللون: <span class="color-text">اصفر</span></div>
+                    </div>
+                    <h3>ورد التوليب (Tulip)</h3>
+                    <div class="flower-price">السعر: 15 د.ل / وردة</div>
+                    <div class="counter-control">
+                        <button class="counter-btn minus-btn">-</button>
+                        <span class="count-number">0</span>
+                        <button class="counter-btn plus-btn">+</button>
+                    </div>
+                </div>
+
+                <div class="flower-card" data-name="ورد الأوركيد">
+                    <div class="carousel-container">
+                        <div class="carousel-slides">
+                            <img src="images/purble orchid.jfif" class="carousel-img active" data-color="بنفسجي">
+                            <img src="images/white orchid.jfif" class="carousel-img" data-color="أبيض">
+                            <img src="images/yellow orchid.jfif" class="carousel-img" data-color="أصفر">
+                            <img src="images/Pink Orchid.jfif" class="carousel-img" data-color="وردي">
+                            <img src="images/blue orchid.jfif " class="carousel-img" data-color="ازرق">
+                        </div>
+                        <button class="carousel-arrow prev-arrow">&#10094;</button>
+                        <button class="carousel-arrow next-arrow">&#10095;</button>
+                        <div class="current-color-badge">اللون: <span class="color-text">بنفسجي</span></div>
+                    </div>
+                    <h3>ورد الأوركيد (Orchid)</h3>
+                    <div class="flower-price">السعر: 15 د.ل / وردة</div>
+                    <div class="counter-control">
+                        <button class="counter-btn minus-btn">-</button>
+                        <span class="count-number">0</span>
+                        <button class="counter-btn plus-btn">+</button>
+                    </div>
+                </div>
+
+                <div class="flower-card" data-name="ورد الجيسوفيلا">
+                    <div class="carousel-container">
+                        <div class="carousel-slides">
+                            <img src="images/white gyps.jfif" class="carousel-img active" data-color="أبيض">
+                            <img src="images/pink gyps.jfif" class="carousel-img" data-color="وردي ">
+                            <img src="images/blue gyps.jfif" class="carousel-img" data-color="أزرق ">
+                            <img src="images/red gyps.jfif" class="carousel-img" data-color="احمر">
+                        </div>
+                        <button class="carousel-arrow prev-arrow">&#10094;</button>
+                        <button class="carousel-arrow next-arrow">&#10095;</button>
+                        <div class="current-color-badge">اللون: <span class="color-text">أبيض</span></div>
+                    </div>
+                    <h3>ورد الجيسوفيلا (Gypsophila)</h3>
+                    <div class="flower-price">السعر: 15 د.ل / وردة</div>
+                    <div class="counter-control">
+                        <button class="counter-btn minus-btn">-</button>
+                        <span class="count-number">0</span>
+                        <button class="counter-btn plus-btn">+</button>
+                    </div>
+                </div>
+
+                <div class="flower-card" data-name="ورد عباد الشمس">
+                    <div class="carousel-container">
+                        <div class="carousel-slides">
+                            <img src="images/عباد1.jfif" class="carousel-img active" data-color="">
+                            <img src="images/عباد2.jfif" class="carousel-img" data-color="">
+                        </div>
+                        <button class="carousel-arrow prev-arrow">&#10094;</button>
+                        <button class="carousel-arrow next-arrow">&#10095;</button>
+                        <div class="current-color-badge"> <span class="color-text "></span></div>
+                    </div>
+                    <h3>ورد عباد الشمس (Sunflower)</h3>
+                    <div class="flower-price">السعر: 15 د.ل / وردة</div>
+                    <div class="counter-control">
+                        <button class="counter-btn minus-btn">-</button>
+                        <span class="count-number">0</span>
+                        <button class="counter-btn plus-btn">+</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="wrapping-step" class="workspace-tab-content">
+            <h2 class="section-title"><i class="fa-solid fa-gift"></i> 2. نوع ورق التغليف المرئي والإضافات</h2>
+            
+            <div class="wrapping-grid">
+                
+                <div class="wrap-box">
+                    <label class="group-label">اختر نوع ورق التغليف المفضل (15 د.ل):</label>
+                    <div class="visual-options-grid">
+                        
+                        <label class="visual-card">
+                            <input type="radio" name="paper-type" value="ورق  كرافت خشن" checked>
+                            <div class="visual-card-content">
+                                <img src="images/pap ger.jfif" alt="ورق كرافت خشن" class="paper-preview-img">
+                                <span>  ورق كرافت خشن</span>
+                            </div>
+                        </label>
+
+                        <label class="visual-card">
+                            <input type="radio" name="paper-type" value="ورق مطفي ناعم">
+                            <div class="visual-card-content">
+                                <img src="images/celo.jfif" alt="مطفي" class="paper-preview-img">
+                                <span>ورق مطفي ناعم</span>
+                            </div>
+                        </label>
+
+                        <label class="visual-card">
+                            <input type="radio" name="paper-type" value="  ورق الجكار">
+                            <div class="visual-card-content">
+                                <img src="images/gacar.jfif" alt=" ورق الجكار" class="paper-preview-img">
+                                <span>  ورق الجكار</span>
+                            </div>
+                        </label>
+
+                    </div>
+                </div>
+
+                <div class="wrap-box">
+                    <label class="group-label">إضافات وتنسيقات اختيارية للباقة:</label>
+                    <div class="options-stack">
+                        
+                        <div class="addon-card-wrapper">
+                            <label class="checkbox-card-custom">
+                                <input type="checkbox" name="addons" value="كرت إهداء مكتوب بخط اليد" id="card-addon-checkbox" data-price="5">
+                                <span>كرت إهداء مكتوب بخط اليد (+5 د.ل)</span>
+                            </label>
+                            <div class="card-text-area-container" id="card-text-container">
+                                <textarea id="gift-card-text" placeholder="اكتب الرسالة التي تريد خطّها على الكرت هنا..." rows="3" name="gift_card_text"></textarea>
+                            </div>
+                        </div>
+
+                        <label class="checkbox-card-custom">
+                            <input type="checkbox" name="addons" value="شريط ستان فخم إضافي" data-price="3">
+                            <span>شريط ستان فخم إضافي (+3 د.ل)</span>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="bottom-action-bar">
+            <div class="live-price-preview">السعر المبدئي للطلب: <span id="live-total">15</span> د.ل</div>
+            <button class="btn-confirm-order" id="openModalBtn">موافق وتأكيد الطلب</button>
+        </div>
+    </main>
+
+    <div class="modal-overlay" id="orderModal">
+        <div class="modal-card">
+            <h3 class="modal-title"><i class="fa-solid fa-receipt"></i> الفاتورة وملخص باقتك</h3>
+            <div class="modal-body" id="modalOrderDetails">
+                </div>
+            <div class="modal-footer">
+                <button class="modal-btn btn-close" id="closeModalBtn">تعديل الاختيارات</button>
+                <button class="modal-btn btn-send" id="sendWhatsAppBtn"><i class="fa-brands fa-whatsapp"></i> إرسال الطلب للمتجر</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
